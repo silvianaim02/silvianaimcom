@@ -2,13 +2,21 @@
 
 import React, { useState } from 'react';
 import NextImage from '../images/NextImage';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
+
 
 const Header = () => {
+  
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    {/* Get the current route */}
+const currentRoute = usePathname();
+    
   return (
-    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+    <div className="px-4 py-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="relative flex items-center justify-between">
-        <a
+        <Link
           href="/"
           aria-label="Company"
           title="Company"
@@ -30,61 +38,35 @@ const Header = () => {
             <rect x="14" y="11" width="7" height="12" />
           </svg>
           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-            Company
+            Silvia Naim
           </span>
-        </a>
+        </Link>
         <ul className="items-center hidden space-x-8 lg:flex">
-          <li>
-            <a
-              href="/"
-              aria-label="Our product"
-              title="Our product"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-            >
-              Product
-            </a>
-          </li>
-          <li>
-            <a
-              href="/"
-              aria-label="Our product"
-              title="Our product"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-            >
-              Features
-            </a>
-          </li>
-          <li>
-            <a
-              href="/"
-              aria-label="Product pricing"
-              title="Product pricing"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-            >
-              Pricing
-            </a>
-          </li>
-          <li>
-            <a
-              href="/"
-              aria-label="About us"
-              title="About us"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-            >
-              About us
-            </a>
-          </li>
+          {links.map(({ href, label }, index) => (
+            <li key={index}>
+              <Link
+                  href={href}
+                  aria-label={label}
+                  title={label}
+                  className={clsx("nav-link nav-link-ltr tracking-wide font-medium text-base text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400", {
+                    "nav-link-active": currentRoute === href,
+                  })}
+                >
+                  {label}
+                </Link>
+            </li>
+          ))}
         </ul>
         <ul className="items-center hidden space-x-8 lg:flex">
           <li>
-            <a
+            <Link
               href="/"
               className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
               aria-label="Sign up"
               title="Sign up"
             >
               Sign up
-            </a>
+            </Link>
           </li>
         </ul>
         <div className="lg:hidden">
@@ -158,56 +140,19 @@ const Header = () => {
                 </div>
                 <nav>
                   <ul className="space-y-4">
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="Our product"
-                        title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Product
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="Our product"
-                        title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Features
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="Product pricing"
-                        title="Product pricing"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Pricing
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="About us"
-                        title="About us"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        About us
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                        aria-label="Sign up"
-                        title="Sign up"
-                      >
-                        Sign up
-                      </a>
-                    </li>
+                    {links.map(({ href, label }, index) => (
+                      <li key={index}>
+                        <Link
+                          href={href}
+                          aria-label={label}
+                          title={label}
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        >
+                          {label}
+                        </Link>
+                      </li>
+                    ))}
+                    
                   </ul>
                 </nav>
               </div>
@@ -218,5 +163,12 @@ const Header = () => {
     </div>
   );
 };
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/articles', label: 'Articles' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/about', label: 'About' },
+];
 
 export default Header;

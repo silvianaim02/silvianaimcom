@@ -8,20 +8,35 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
+/* navbar */
+.nav-link {
+  display: inline-block;
+  position: relative;
+}
 
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link-ltr:hover::before {
+  transition: 300ms;
+  height: 2px;
+  content: "";
+  position: absolute;
+  background-color: #a8abaf;
+  width: 50%;
+  left: 25%;
+  border-radius: 9999px;
+  bottom: -30%;
+}
+
+.nav-link-active::before {
+  height: 2px;
+  content: "";
+  position: absolute;
+ background-color: #031D44;
+  width: 50%;
+  left: 25%;
+  border-radius: 9999px;
+  bottom: -30%;
+}
