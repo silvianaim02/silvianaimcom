@@ -21,7 +21,7 @@
 .nav-link-ltr:hover::before {
   transition: 300ms;
   height: 2px;
-  content: "";
+  content: '';
   position: absolute;
   background-color: #a8abaf;
   width: 50%;
@@ -32,9 +32,9 @@
 
 .nav-link-active::before {
   height: 2px;
-  content: "";
+  content: '';
   position: absolute;
- background-color: #031D44;
+  background-color: #031d44;
   width: 50%;
   left: 25%;
   border-radius: 9999px;

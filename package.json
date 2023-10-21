@@ -9,9 +9,9 @@
     "lint": "next lint",
     "lint:fix": "eslint src --fix && yarn format",
     "lint:strict": "eslint --max-warnings=0 src",
-    "typecheck": "tsc --noEmit --incremental false",
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore .",
+    "typecheck": "tsc --noEmit --incremental false",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -33,7 +33,7 @@
     "husky": "^8.0.0",
     "postcss": "^8.4.31",
     "prettier": "2.8.8",
-    "prettier-plugin-tailwindcss": "^0.5.6",
+    "prettier-plugin-tailwindcss": "0.4.1",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.2.2"
   }
