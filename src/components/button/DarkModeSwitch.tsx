@@ -1,16 +1,19 @@
-'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { RiMoonClearFill, RiSunFill } from 'react-icons/ri';
 
 const DarkModeSwitch = () => {
   const [isOn, setIsOn] = useState(() => {
-    if (localStorage.getItem('theme') === 'light') {
+    if (
+      typeof window !== 'undefined' &&
+      localStorage.getItem('theme') === 'light'
+    ) {
       return true;
     } else {
       return false;
     }
   });
+
   const toggleSwitch = () => setIsOn(!isOn);
   const spring = {
     type: 'spring',
@@ -18,23 +21,27 @@ const DarkModeSwitch = () => {
     damping: 30,
   };
 
-  if (isOn) {
-    document.documentElement.classList.remove('dark');
-    localStorage.setItem('theme', 'light');
-  } else {
-    document.documentElement.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
-  }
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (isOn) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
 
-  if (
-    localStorage.theme === 'light' ||
-    (!('theme' in localStorage) &&
-      window.matchMedia('(prefers-color-scheme: light)').matches)
-  ) {
-    document.documentElement.classList.add('dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-  }
+      if (
+        localStorage.theme === 'light' ||
+        (!('theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: light)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+  }, [isOn]);
 
   return (
     <div
