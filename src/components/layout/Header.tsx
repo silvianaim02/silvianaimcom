@@ -5,6 +5,7 @@ import NextImage from '../images/NextImage';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import DarkModeSwitch from '../button/DarkModeSwitch';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,11 +62,7 @@ const Header = () => {
           ))}
         </ul>
         <ul className='hidden items-center space-x-8 lg:flex'>
-          <div className='pb-10.02 pr-6.68 inline-flex h-10 w-36 items-center justify-center overflow-hidden rounded-full bg-blue-200 bg-opacity-80 pl-7 pt-2 shadow-md'>
-            <div className='leading-6.01 h-6 w-24 break-words text-base font-semibold text-blue-900'>
-              Boook a call
-            </div>
-          </div>
+          <DarkModeSwitch />
         </ul>
         <div className='lg:hidden'>
           <button
