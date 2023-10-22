@@ -38,7 +38,7 @@ const Header = () => {
             <rect x='14' y='1' width='7' height='6' />
             <rect x='14' y='11' width='7' height='12' />
           </svg>
-          <span className='ml-2 text-xl font-bold uppercase tracking-wide text-gray-800'>
+          <span className='ml-2 text-xl font-bold uppercase tracking-wide text-gray-800 dark:text-slate-200'>
             Silvia Naim
           </span>
         </Link>
@@ -50,7 +50,7 @@ const Header = () => {
                 aria-label={label}
                 title={label}
                 className={clsx(
-                  'nav-link nav-link-ltr hover:text-deep-purple-accent-400 text-base font-medium tracking-wide text-gray-700 transition-colors duration-200',
+                  'nav-link nav-link-ltr hover:text-deep-purple-accent-400 text-base font-medium tracking-wide text-gray-700 transition-colors duration-200 dark:text-slate-200',
                   {
                     'nav-link-active': currentRoute === href,
                   }
