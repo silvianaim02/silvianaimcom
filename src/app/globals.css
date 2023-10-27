@@ -46,3 +46,14 @@
   border-radius: 9999px;
   bottom: -30%;
 }
+
+.nav-link-active-dark::before {
+  height: 2px;
+  content: '';
+  position: absolute;
+  background-color: #ffffff;
+  width: 50%;
+  left: 25%;
+  border-radius: 9999px;
+  bottom: -30%;
+}

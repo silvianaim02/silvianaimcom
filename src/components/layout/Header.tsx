@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NextImage from '../images/NextImage';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -12,9 +12,18 @@ import { useTheme } from 'next-themes';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
+  const isDarkTheme = theme === 'dark'; // Evaluasi hanya satu kali
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const currentRoute = usePathname();
+
+  console.log(theme);
 
   return (
     <div className='mx-auto px-4 py-6 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 '>
@@ -54,7 +63,9 @@ const Header = () => {
                 className={clsx(
                   'nav-link nav-link-ltr hover:text-deep-purple-accent-400 text-base font-medium tracking-wide text-gray-700 transition-colors duration-200 dark:text-slate-200',
                   {
-                    'nav-link-active': currentRoute === href,
+                    'nav-link-active-dark':
+                      currentRoute === href && isDarkTheme,
+                    'nav-link-active': currentRoute === href && !isDarkTheme,
                   }
                 )}
               >
@@ -70,7 +81,7 @@ const Header = () => {
           <DarkModeSwitch />
           <MenuButton
             isOpen={isMenuOpen}
-            color={theme === 'dark' ? '#ffffff' : '#000000'}
+            color={mounted ? (isDarkTheme ? '#ffffff' : '#000000') : '#000000'}
             lineProps={{ strokeLinecap: 'round' }}
             width={35}
             height={35}
