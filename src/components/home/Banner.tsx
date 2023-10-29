@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { FaTelegramPlane } from 'react-icons/fa';
@@ -35,17 +36,16 @@ const Banner = () => {
             </p>
             <ul className='mb-10 flex flex-wrap items-center justify-center'>
               <li>
-                <a
-                  href='https://links.tailgrids.com/play-download'
+                <Link
+                  href='/articles'
                   className='text-dark hover:text-primary inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-[#2f7cf0] to-[#0369a1]  px-6 py-4 text-center text-base font-medium text-white transition duration-300 ease-in-out hover:shadow-lg dark:bg-white sm:px-10'
                 >
-                  Read My Blog
-                </a>
+                  Read My Articles
+                </Link>
               </li>
               <li>
-                <a
-                  href='https://github.com/tailgrids/play-tailwind'
-                  target='_blank'
+                <Link
+                  href='/projects'
                   className='flex items-center px-6 py-4 text-base font-medium text-[#0369a1] transition duration-300 ease-in-out hover:opacity-70 dark:text-[#0cd3ff] dark:hover:opacity-90 sm:px-10'
                 >
                   See my portfolio
@@ -59,14 +59,14 @@ const Banner = () => {
                       <path d='M19.2188 2.90632L17.0625 0.343819C16.875 0.125069 16.5312 0.0938193 16.2812 0.281319C16.0625 0.468819 16.0312 0.812569 16.2188 1.06257L18.25 3.46882H0.9375C0.625 3.46882 0.375 3.71882 0.375 4.03132C0.375 4.34382 0.625 4.59382 0.9375 4.59382H18.25L16.2188 7.00007C16.0312 7.21882 16.0625 7.56257 16.2812 7.78132C16.375 7.87507 16.5 7.90632 16.625 7.90632C16.7812 7.90632 16.9375 7.84382 17.0312 7.71882L19.1875 5.15632C19.75 4.46882 19.75 3.53132 19.2188 2.90632Z' />
                     </svg>
                   </span>
-                </a>
+                </Link>
               </li>
             </ul>
             <div className='sm:dHctZ2FwLTQ flex items-center justify-center gap-7'>
               <a
                 className='hover:dHctYmctc2xhdGUtNTA flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 transition-transform duration-200 dark:border-gray-700'
                 aria-label='Follow on Dribbble'
-                href='https://dribbble.com'
+                href='https://github.com/silvianaim02'
               >
                 <span className='text-2xl'>
                   <AiFillGithub />
@@ -75,7 +75,7 @@ const Banner = () => {
               <a
                 className='hover:dHctYmctc2xhdGUtNTA flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 transition-transform duration-200 dark:border-gray-700'
                 aria-label='Follow on Dribbble'
-                href='https://dribbble.com'
+                href='https://www.linkedin.com/in/silvianaim02/'
               >
                 <span className='text-2xl text-blue-700'>
                   <AiFillLinkedin />
@@ -84,7 +84,7 @@ const Banner = () => {
               <a
                 className='hover:dHctYmctc2xhdGUtNTA flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 transition-transform duration-200 dark:border-gray-700'
                 aria-label='Follow on Dribbble'
-                href='https://dribbble.com'
+                href='https://t.me/silvianaim02'
               >
                 <span className='text-2xl text-blue-500'>
                   <FaTelegramPlane />
