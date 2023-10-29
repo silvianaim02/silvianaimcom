@@ -23,36 +23,39 @@ const Header = () => {
 
   const currentRoute = usePathname();
 
-  console.log(theme);
-
   return (
-    <div className='mx-auto px-4 py-6 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 '>
+    <div className='mx-auto px-4 py-6 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8'>
       <div className='relative flex items-center justify-between'>
-        <Link
-          href='/'
-          aria-label='Company'
-          title='Company'
-          className='inline-flex items-center'
-        >
-          <svg
-            className='text-deep-purple-accent-400 w-8'
-            viewBox='0 0 24 24'
-            strokeLinejoin='round'
-            strokeWidth='2'
-            strokeLinecap='round'
-            strokeMiterlimit='10'
-            stroke='currentColor'
-            fill='none'
+        <div className='flex items-center gap-8'>
+          <Link
+            href='/'
+            aria-label='Company'
+            title='Company'
+            className='inline-flex items-center'
           >
-            <rect x='3' y='1' width='7' height='12' />
-            <rect x='3' y='17' width='7' height='6' />
-            <rect x='14' y='1' width='7' height='6' />
-            <rect x='14' y='11' width='7' height='12' />
-          </svg>
-          <span className='ml-2 text-xl font-bold uppercase tracking-wide text-gray-800 dark:text-slate-200'>
-            Silvia Naim
-          </span>
-        </Link>
+            <svg
+              className='w-8 text-[#0369a1]'
+              viewBox='0 0 24 24'
+              strokeLinejoin='round'
+              strokeWidth='2'
+              strokeLinecap='round'
+              strokeMiterlimit='10'
+              stroke='currentColor'
+              fill='none'
+            >
+              <rect x='3' y='1' width='7' height='12' />
+              <rect x='3' y='17' width='7' height='6' />
+              <rect x='14' y='1' width='7' height='6' />
+              <rect x='14' y='11' width='7' height='12' />
+            </svg>
+            <span className='text-header-gradient ml-2 text-xl font-bold uppercase tracking-wide'>
+              Silvia Naim
+            </span>
+          </Link>
+          <ul className='hidden items-center space-x-8 lg:flex'>
+            <DarkModeSwitch />
+          </ul>
+        </div>
         <ul className='hidden items-center space-x-8 lg:flex'>
           {links.map(({ href, label }, index) => (
             <li key={index}>
@@ -74,9 +77,6 @@ const Header = () => {
             </li>
           ))}
         </ul>
-        <ul className='hidden items-center space-x-8 lg:flex'>
-          <DarkModeSwitch />
-        </ul>
         <div className='flex justify-center gap-2 lg:hidden'>
           <DarkModeSwitch />
           <MenuButton
@@ -95,7 +95,7 @@ const Header = () => {
         </div>
       </div>
       {isMenuOpen && (
-        <div className='relative'>
+        <div className='relative z-40'>
           <div
             className='fixed inset-0 h-full w-full overflow-y-auto bg-gray-600 bg-opacity-50'
             id='my-modal'

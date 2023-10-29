@@ -57,3 +57,16 @@
   border-radius: 9999px;
   bottom: -30%;
 }
+
+/* Text */
+.text-header-gradient {
+  background: rgb(57, 132, 244);
+  background: linear-gradient(
+    169.4deg,
+    #0cd3ff 36.87%,
+    #2f7cf0 78.04%,
+    #0369a1 103.77%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
