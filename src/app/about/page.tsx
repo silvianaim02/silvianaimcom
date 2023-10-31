@@ -1,14 +1,19 @@
 import React from 'react';
+import BlurImage from '@/components/images/BlurImage';
 
 const page = () => {
   return (
     <div className='min-h-[600px] pb-6 pt-16'>
       <div className='container m-auto px-6 text-gray-600 md:px-12 xl:px-6'>
         <div className='mb-10 flex items-center gap-6 space-y-2 lg:mx-auto lg:w-6/12'>
-          <img
+          <BlurImage
+            image={
+              'https://silvianaim02.github.io/static/media/avatar.17ebff11.jpg'
+            }
             className='h-16 w-16 rounded-full md:h-20 md:w-20'
-            src='https://silvianaim02.github.io/static/media/avatar.17ebff11.jpg'
-            alt='Rounded avatar'
+            width={64}
+            height={64}
+            alt='Silvia Naim Profile'
           />
           <div>
             <h2 className='text-xl font-bold text-gray-800 dark:text-white md:text-2xl'>

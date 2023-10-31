@@ -2,6 +2,7 @@
 const nextConfig = {
   images: {
     domains: [
+      'silvianaim02.github.io',
       'res.cloudinary.com',
 
       // Spotify Album
