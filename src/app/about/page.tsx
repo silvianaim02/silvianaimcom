@@ -10,9 +10,9 @@ const page = () => {
             image={
               'https://silvianaim02.github.io/static/media/avatar.17ebff11.jpg'
             }
-            className='h-16 w-16 rounded-full md:h-20 md:w-20'
-            width={64}
-            height={64}
+            className='rounded-full'
+            width={80}
+            height={80}
             alt='Silvia Naim Profile'
           />
           <div>
