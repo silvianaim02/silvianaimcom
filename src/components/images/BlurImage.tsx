@@ -22,6 +22,7 @@ const BlurImage: React.FC<BlurImageProps> = ({
   return (
     <div className={`${className} bg-gray-200 dark:bg-gray-700`}>
       <Image
+        loading='lazy'
         alt={alt}
         src={image}
         width={width}

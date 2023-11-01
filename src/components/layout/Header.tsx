@@ -33,21 +33,6 @@ const Header = () => {
             title='Company'
             className='inline-flex items-center'
           >
-            <svg
-              className='w-8 text-[#0369a1]'
-              viewBox='0 0 24 24'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              strokeLinecap='round'
-              strokeMiterlimit='10'
-              stroke='currentColor'
-              fill='none'
-            >
-              <rect x='3' y='1' width='7' height='12' />
-              <rect x='3' y='17' width='7' height='6' />
-              <rect x='14' y='1' width='7' height='6' />
-              <rect x='14' y='11' width='7' height='12' />
-            </svg>
             <span className='text-header-gradient ml-2 text-xl font-bold uppercase tracking-wide'>
               Silvia Naim
             </span>
@@ -94,6 +79,7 @@ const Header = () => {
           />
         </div>
       </div>
+      {/* Modal */}
       {isMenuOpen && (
         <div className='relative z-40'>
           <div
@@ -119,6 +105,7 @@ const Header = () => {
                     <li key={index}>
                       <Link
                         href={href}
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
                         aria-label={label}
                         title={label}
                         className='hover:text-deep-purple-accent-400 font-semibold tracking-wide text-gray-700 transition-colors duration-200 dark:text-slate-200'
