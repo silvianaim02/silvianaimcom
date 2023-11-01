@@ -70,3 +70,11 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* header */
+.bottom-border-header {
+  @apply border-b border-solid border-zinc-100 dark:border-zinc-700;
+}
+.top-border-header {
+  @apply border-t border-solid border-zinc-100 dark:border-zinc-700;
+}

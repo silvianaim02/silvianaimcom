@@ -3,7 +3,7 @@ import React from 'react';
 
 const TechStack = () => {
   return (
-    <div className='relative flex flex-col items-center overflow-hidden bg-gray-100 py-20 dark:bg-gray-800 md:py-40'>
+    <div className='relative flex flex-col items-center overflow-hidden py-20 dark:bg-gray-800 md:py-40'>
       <div className='container relative z-[1] m-auto px-6 md:px-12'>
         <div className='m-auto text-center md:w-8/12 lg:w-6/12'>
           <h2 className='text-2xl font-bold text-gray-800 dark:text-white md:text-4xl'>
