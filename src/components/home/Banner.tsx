@@ -9,7 +9,7 @@ const Banner = () => {
       <div
         data-aos='fade-zoom-in'
         data-aos-easing='ease-in-back'
-        data-aos-delay='300'
+        data-aos-delay='200'
         className='flex flex-wrap items-center justify-center'
       >
         <div className=' w-full px-4 py-20 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8'>
