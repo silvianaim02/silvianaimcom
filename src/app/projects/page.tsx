@@ -4,7 +4,7 @@ import React from 'react';
 const page = () => {
   return (
     <div className='pb-6 pt-16'>
-      <div className='m-auto px-6 text-gray-600 xl:container md:px-12 xl:px-6'>
+      <div className='mx-auto px-4 text-gray-600 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8'>
         <div className='mb-12 space-y-2 text-center'>
           <h2 className='text-3xl font-bold text-gray-800 dark:text-white md:text-4xl'>
             Sharing is Caring

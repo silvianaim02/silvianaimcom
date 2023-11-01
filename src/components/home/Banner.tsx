@@ -64,6 +64,7 @@ const Banner = () => {
             </ul>
             <div className='sm:dHctZ2FwLTQ flex items-center justify-center gap-7'>
               <a
+                target='_blank'
                 className='hover:dHctYmctc2xhdGUtNTA flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 transition-transform duration-200 dark:border-gray-700'
                 aria-label='Follow on Dribbble'
                 href='https://github.com/silvianaim02'
@@ -73,6 +74,7 @@ const Banner = () => {
                 </span>
               </a>
               <a
+                target='_blank'
                 className='hover:dHctYmctc2xhdGUtNTA flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 transition-transform duration-200 dark:border-gray-700'
                 aria-label='Follow on Dribbble'
                 href='https://www.linkedin.com/in/silvianaim02/'
@@ -82,6 +84,7 @@ const Banner = () => {
                 </span>
               </a>
               <a
+                target='_blank'
                 className='hover:dHctYmctc2xhdGUtNTA flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 transition-transform duration-200 dark:border-gray-700'
                 aria-label='Follow on Dribbble'
                 href='https://t.me/silvianaim02'
