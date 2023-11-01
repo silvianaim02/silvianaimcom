@@ -7,9 +7,7 @@ const page = () => {
       <div className='container m-auto px-6 text-gray-600 md:px-12 xl:px-6'>
         <div className='mb-10 flex items-center gap-6 space-y-2 lg:mx-auto lg:w-6/12'>
           <BlurImage
-            image={
-              'https://silvianaim02.github.io/static/media/avatar.17ebff11.jpg'
-            }
+            image={'/images/silvia-naim.png'}
             className='rounded-full'
             width={80}
             height={80}
