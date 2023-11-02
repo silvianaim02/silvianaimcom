@@ -34,7 +34,7 @@ const Header = () => {
               title='Company'
               className='inline-flex items-center'
             >
-              <span className='text-header-gradient ml-2 text-xl font-bold uppercase tracking-wide'>
+              <span className='text-blue-gradient ml-2 text-xl font-bold uppercase tracking-wide'>
                 Silvia Naim
               </span>
             </Link>
