@@ -47,4 +47,20 @@ export const projectDatas = [
     image: '/images/projects/6-kitchensetcibubur.png',
     url: 'https://kitchensetcibuburmurah.com/',
   },
+  {
+    id: '7',
+    title: 'rumahterapialbirru.com',
+    body: '',
+    techStack: [''],
+    image: '/images/projects/7-albirru.png',
+    url: 'https://rumahterapialbirru.com',
+  },
+  {
+    id: '8',
+    title: 'nazwantherapycenter.com',
+    body: '',
+    techStack: [''],
+    image: '/images/projects/8-nazwan-therapy-center.png',
+    url: 'https://nazwan-therapy-center.com/',
+  },
 ];

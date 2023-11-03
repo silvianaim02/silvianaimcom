@@ -12,8 +12,9 @@ const page = () => {
             Projects
           </h2>
           <p className='text-gray-600 dark:text-gray-300 lg:mx-auto lg:w-6/12'>
-            These are my past projects, including personal experiments and a
-            list of freelance projects if they are publicly available.
+            These are my past projects, including personal experiment, a list of
+            freelance projects if they are publicly available, or just a fun
+            project but I wanted to include it.
           </p>
         </div>
         <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
