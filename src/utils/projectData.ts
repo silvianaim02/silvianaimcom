@@ -1,28 +1,26 @@
 export const projectDatas = [
   {
     id: '1',
-    title: 'hello ini 1',
-    body: 'isi bodi 1 sdjjs ssjjs sjsjsj sjsjj sjsj sjsj sjsj sjjs sjjsj s jjsjs sjsjj s sjjsjs',
+    title: 'Birrussment API',
+    body: 'This is a REST API project required by the Birrussment platform (Website-based application for screening/early detection of speech delay in children). This project was also used for my final year project at University together with 1 of my colleagues',
     techStack: [''],
     image: '/images/projects/1-birrussment-api.png',
-    url: 'https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+    url: 'https://birrussment.com',
   },
   {
     id: '2',
-    title: 'hello ini 2',
-    body: 'isi bodi 2',
+    title: 'Birrussment Admin',
+    body: 'Admin panel required by the Birrussment platform. The purpose of this website is to help administrators in management users, Assessment questions, and Assessment results from early detection applications speech delay',
     techStack: [''],
-    image:
-      'https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+    image: '/images/projects/2-admin-birrussment.png',
     url: '',
   },
   {
     id: '3',
-    title: 'hello ini 2',
-    body: 'isi bodi 2',
+    title: 'Disscuss-IT',
+    body: 'A community Q&A platform focused on programming and technology-related topics. This project is one of the submissions at the IDCamp x Dicoding Program',
     techStack: [''],
-    image:
-      'https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
-    url: 'https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80',
+    image: '/images/projects/3-discuss-it.png',
+    url: 'https://discuss-it.vercel.app/',
   },
 ];

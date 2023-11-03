@@ -43,7 +43,7 @@ const page = () => {
                     href={data.url}
                     className='pointer icon-blue-gradient text-2xl'
                   >
-                    <FiExternalLink />
+                    {data.url ? <FiExternalLink /> : null}
                   </a>
                 </div>
                 <p className='mt-4 text-gray-600 dark:text-gray-300'>
