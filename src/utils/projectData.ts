@@ -17,10 +17,26 @@ export const projectDatas = [
   },
   {
     id: '3',
-    title: 'Disscuss-IT',
-    body: 'A community Q&A platform focused on programming and technology-related topics. This project is one of the submissions at the IDCamp x Dicoding Program',
+    title: 'Discuss-IT',
+    body: 'A community Q&A platform website on programming and technology-related topics. This project is one of the submissions at the IDCamp x Dicoding Program',
     techStack: [''],
     image: '/images/projects/3-discuss-it.png',
     url: 'https://discuss-it.vercel.app/',
+  },
+  {
+    id: '4',
+    title: 'SecondHand',
+    body: 'An e-commerce platform for buying and selling secondhand goods. This project is the capstone project of the MSIB program at Binar Academy in the year 2022.',
+    techStack: [''],
+    image: '/images/projects/4-secondhand.png',
+    url: 'https://secondhandfe.vercel.app/',
+  },
+  {
+    id: '5',
+    title: 'Irememo',
+    body: 'Website for storing digital notes. Apart from adding notes, you can also edit, delete and archive notes. This project is one of the submissions at the IDCamp x Dicoding Program',
+    techStack: [''],
+    image: '/images/projects/5-irememo.png',
+    url: 'https://irememo.vercel.app/login',
   },
 ];
