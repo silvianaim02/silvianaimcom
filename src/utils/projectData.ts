@@ -37,6 +37,14 @@ export const projectDatas = [
     body: 'Website for storing digital notes. Apart from adding notes, you can also edit, delete and archive notes. This project is one of the submissions at the IDCamp x Dicoding Program',
     techStack: [''],
     image: '/images/projects/5-irememo.png',
-    url: 'https://irememo.vercel.app/login',
+    url: 'https://irememo.vercel.app/',
+  },
+  {
+    id: '6',
+    title: 'Kitchenset Cibubur',
+    body: 'Client’s company profile website built with WordPress and Elementor. This is a simple development but provides quite a challenge for copywriting',
+    techStack: [''],
+    image: '/images/projects/6-kitchensetcibubur.png',
+    url: 'https://kitchensetcibuburmurah.com/',
   },
 ];
