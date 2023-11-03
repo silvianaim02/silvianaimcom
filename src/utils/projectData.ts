@@ -63,4 +63,20 @@ export const projectDatas = [
     image: '/images/projects/8-nazwan-therapy-center.png',
     url: 'https://nazwantherapycenter.com/',
   },
+  {
+    id: '9',
+    title: 'Programming Knowledge Blogging',
+    body: '',
+    techStack: [''],
+    image: '/images/projects/9-minihackathon.png',
+    url: 'https://programmingknowledge-jamaica.vercel.app',
+  },
+  {
+    id: '10',
+    title: 'BCR Landing Page',
+    body: '',
+    techStack: [''],
+    image: '/images/projects/10-bcr.png',
+    url: 'https://silvianaim02.github.io/Binar-Car-Rental',
+  },
 ];
