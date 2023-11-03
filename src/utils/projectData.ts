@@ -61,6 +61,6 @@ export const projectDatas = [
     body: '',
     techStack: [''],
     image: '/images/projects/8-nazwan-therapy-center.png',
-    url: 'https://nazwan-therapy-center.com/',
+    url: 'https://nazwantherapycenter.com/',
   },
 ];

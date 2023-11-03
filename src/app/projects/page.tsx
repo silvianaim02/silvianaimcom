@@ -33,9 +33,12 @@ const page = () => {
                 />
               </div>
               <div className='relative mt-4'>
-                <div className='flex justify-between'>
+                <div className='flex justify-between gap-2'>
                   <a target='_blank' href={data.url} className='pointer'>
-                    <h3 className='text-2xl font-semibold text-gray-800 dark:text-white'>
+                    <h3
+                      style={{ wordBreak: 'break-word' }}
+                      className='text-2xl font-semibold text-gray-800 dark:text-white'
+                    >
                       {data.title}
                     </h3>
                   </a>
