@@ -42,7 +42,7 @@ export const projectDatas = [
   {
     id: '6',
     title: 'Kitchenset Cibubur',
-    body: 'Client’s company profile website built with WordPress and Elementor. This is a simple development but provides quite a challenge for copywriting',
+    body: 'This is one of the client’s freelance projects that is displayed publicly built with WordPress and Elementor. This is a simple development but provides quite a challenge for copywriting',
     techStack: [''],
     image: '/images/projects/6-kitchensetcibubur.png',
     url: 'https://kitchensetcibuburmurah.com/',
@@ -50,7 +50,7 @@ export const projectDatas = [
   {
     id: '7',
     title: 'rumahterapialbirru.com',
-    body: '',
+    body: 'This is one of the client’s freelance projects that is displayed publicly built with Next.js',
     techStack: [''],
     image: '/images/projects/7-albirru.png',
     url: 'https://rumahterapialbirru.com',
@@ -58,7 +58,7 @@ export const projectDatas = [
   {
     id: '8',
     title: 'nazwantherapycenter.com',
-    body: '',
+    body: 'This is one of the client’s freelance projects that is displayed publicly built with Next.js',
     techStack: [''],
     image: '/images/projects/8-nazwan-therapy-center.png',
     url: 'https://nazwantherapycenter.com/',
@@ -66,7 +66,7 @@ export const projectDatas = [
   {
     id: '9',
     title: 'Programming Knowledge Blogging',
-    body: '',
+    body: 'a site to find the latest and most trusted programming articles. This project became the 3rd Winner in the Mini-Hackaton (Unlocking HER Potentials, Woman In Tech) held by Web Programming Unpas (WPU)',
     techStack: [''],
     image: '/images/projects/9-minihackathon.png',
     url: 'https://programmingknowledge-jamaica.vercel.app',
@@ -74,7 +74,7 @@ export const projectDatas = [
   {
     id: '10',
     title: 'BCR Landing Page',
-    body: '',
+    body: 'This landing page is one of the MSIB program at Binar Academy in the year 2022.',
     techStack: [''],
     image: '/images/projects/10-bcr.png',
     url: 'https://silvianaim02.github.io/Binar-Car-Rental',
