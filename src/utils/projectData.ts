@@ -66,7 +66,7 @@ export const projectDatas = [
   {
     id: '9',
     title: 'Programming Knowledge Blogging',
-    body: 'a site to find the latest and most trusted programming articles. This project became the 3rd Winner in the Mini-Hackaton (Unlocking HER Potentials, Woman In Tech) held by Web Programming Unpas (WPU)',
+    body: 'A site to find the latest and most trusted programming articles. Feeling grateful that this project became the 3rd Winner in the Mini-Hackaton (Unlocking HER Potentials, Woman in Tech) held by Web Programming Unpas (WPU)',
     techStack: [''],
     image: '/images/projects/9-minihackathon.png',
     url: 'https://programmingknowledge-jamaica.vercel.app',
