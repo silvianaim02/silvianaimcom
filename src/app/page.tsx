@@ -1,12 +1,14 @@
 import Banner from '@/components/home/Banner';
 import TechStack from '@/components/home/TechStack';
-import Image from 'next/image';
+import RootLayout from '@/components/layout/rootLayout';
 
 export default function Home() {
   return (
     <>
-      <Banner />
-      <TechStack />
+      <RootLayout>
+        <Banner />
+        <TechStack />
+      </RootLayout>
     </>
   );
 }

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 interface BlurImageProps {
-  image: string;
+  image: string | null; // Allow null for the image prop
   className: string;
   width: number;
   height: number;
@@ -19,12 +19,15 @@ const BlurImage: React.FC<BlurImageProps> = ({
 }) => {
   const [isLoading, setLoading] = useState(true);
 
+  // Provide a default image URL if image is null
+  const imageUrl = image || '/images/projects/3-discuss-it.png';
+
   return (
     <div className={`${className} bg-gray-200 dark:bg-gray-700`}>
       <Image
         loading='lazy'
         alt={alt}
-        src={image}
+        src={image || imageUrl}
         width={width}
         height={height}
         className={`

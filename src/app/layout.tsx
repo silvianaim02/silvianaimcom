@@ -2,10 +2,11 @@ import Header from '@/components/layout/Header';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { Providers } from '@/components/provider/providers';
+import Providers from '@/components/provider/providers';
 import Footer from '@/components/layout/Footer';
 import { AOSInit } from '@/components/aos';
 import NextTopLoader from 'nextjs-toploader';
+import ChoiceLayout from '@/components/layout/rootLayout';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -34,11 +35,7 @@ export default function RootLayout({
           speed={200}
           shadow='0 0 10px #2299DD,0 0 5px #2299DD'
         />
-        <Providers>
-          <Header />
-          {children}
-          <Footer />
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
