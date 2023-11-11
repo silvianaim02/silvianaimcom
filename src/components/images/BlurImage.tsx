@@ -5,8 +5,8 @@ import Image from 'next/image';
 interface BlurImageProps {
   image: string | null; // Allow null for the image prop
   className: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
   alt: string;
 }
 
@@ -32,10 +32,10 @@ const BlurImage: React.FC<BlurImageProps> = ({
         height={height}
         className={`
               ${className} 
-              duration-700 ease-in-out group-hover:opacity-75
+              transition duration-1000 ease-in-out group-hover:opacity-75
               ${
                 isLoading
-                  ? 'scale-110 blur-3xl grayscale'
+                  ? 'scale-120 blur-2xl grayscale'
                   : 'scale-100 blur-0 grayscale-0'
               })`}
         onLoadingComplete={() => setLoading(false)}

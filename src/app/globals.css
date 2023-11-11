@@ -6,6 +6,27 @@
   body {
     @apply bg-white dark:bg-gray-800;
   }
+  h1 {
+    @apply text-6xl;
+  }
+  h2 {
+    @apply text-5xl;
+  }
+  h3 {
+    @apply text-4xl;
+  }
+  h4 {
+    @apply text-3xl;
+  }
+  h5 {
+    @apply text-2xl;
+  }
+  h5 {
+    @apply text-xl;
+  }
+  h6 {
+    @apply text-lg;
+  }
 }
 
 :root {
@@ -89,4 +110,12 @@
 }
 .top-border-header {
   @apply border-t border-solid border-zinc-100 dark:border-zinc-700;
+}
+
+/* TEXT */
+.limited-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

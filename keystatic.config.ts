@@ -1,5 +1,5 @@
-// keystatic.config.ts
-import { config, fields, collection } from '@keystatic/core';
+import { ComponentBlocks } from '@/components/componentBlock/ComponentBlock';
+import { config, fields, collection, component } from '@keystatic/core';
 
 export default config({
   storage: {
@@ -17,7 +17,7 @@ export default config({
           label: 'Event date',
           description: 'The date of the event',
         }),
-        avatar: fields.image({
+        thumbnail: fields.image({
           label: 'Thumbnails',
           description: 'Thumbnail for card',
           // This will output the images in the "public" directory
@@ -34,10 +34,38 @@ export default config({
         ),
         content: fields.document({
           label: 'Content',
-          formatting: true,
-          dividers: true,
           links: true,
-          images: true,
+          layouts: [[1], [1, 1]],
+          images: {
+            directory: 'public/images/articles',
+            publicPath: '/images/articles/',
+            schema: {
+              title: fields.text({
+                label: 'Caption',
+                description:
+                  'The text to display under the image in a caption.',
+              }),
+            },
+          },
+          dividers: true,
+          formatting: {
+            alignment: {
+              center: true,
+              end: true,
+            },
+            blockTypes: true,
+            headingLevels: true,
+            inlineMarks: {
+              code: true,
+              bold: true,
+              italic: true,
+              underline: true,
+              strikethrough: true,
+            },
+            listTypes: true,
+          },
+          tables: true,
+          componentBlocks: ComponentBlocks,
         }),
       },
     }),
