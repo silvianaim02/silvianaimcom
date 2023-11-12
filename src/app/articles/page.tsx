@@ -2,6 +2,7 @@ import BlurImage from '@/components/images/BlurImage';
 import React from 'react';
 import { createReader } from '@keystatic/core/reader';
 import keystaticConfig from '../../../keystatic.config';
+import { DocumentRenderer } from '@keystatic/core/renderer';
 
 import Link from 'next/link';
 
@@ -11,6 +12,7 @@ const reader = createReader(process.cwd(), keystaticConfig);
 const page = async () => {
   // 2. Read the "articles" collection
   const articles = await reader.collections.articles.all();
+  console.log(articles);
 
   return (
     <div className='pb-6 pt-16'>
@@ -25,15 +27,17 @@ const page = async () => {
           </p>
         </div>
 
-        {articles.map((article, index: any) => (
+        {articles.map(async (article, index: any) => (
           <div
-            key={`/articles/${index}/${article.slug}`}
+            key={`/articles/${article.slug}`}
             className='lg:mx-auto lg:w-3/4 xl:w-2/4'
           >
             <div className='group relative -mx-4 rounded-3xl border border-transparent bg-white p-6 shadow-2xl shadow-transparent transition duration-300 hover:z-10 hover:border-gray-100 hover:shadow-gray-600/10 dark:bg-transparent dark:shadow-none dark:hover:border-gray-700 dark:hover:bg-gray-800 sm:-mx-8 sm:flex sm:gap-8 sm:p-8'>
               <div className='overflow-hidden rounded-3xl transition-all duration-500 group-hover:rounded-xl sm:w-2/6'>
                 <BlurImage
-                  image={article.entry.avatar ? article.entry.avatar : null}
+                  image={
+                    article.entry.thumbnail ? article.entry.thumbnail : null
+                  }
                   className='h-56 w-full object-cover object-top transition duration-500 group-hover:scale-105 sm:h-full'
                   width={1000}
                   height={667}
@@ -50,24 +54,19 @@ const page = async () => {
                     {article.entry.title}
                   </Link>
                 </h3>
-                <p className='my-6 text-gray-600 dark:text-gray-300'>
-                  Laudantium in, voluptates ex placeat quo harum aliquam totam,
-                  doloribus eum impedit atque...
+                <p className='limited-text my-6 text-gray-600 dark:text-gray-300'>
+                  {article.entry.summary}
                 </p>
-
                 <div className='flex gap-4'>
-                  <a
-                    href='#'
-                    className='text-primary hover:bg-primary rounded-full border border-gray-100 px-3 py-1 text-sm font-medium transition duration-300 hover:border-transparent hover:text-white dark:border-gray-700 dark:text-gray-300'
-                  >
-                    Tailwindcss
-                  </a>
-                  <a
-                    href='#'
-                    className='text-primary hover:bg-primary rounded-full border border-gray-100 px-3 py-1 text-sm font-medium transition duration-300 hover:border-transparent hover:text-white dark:border-gray-700 dark:text-gray-300'
-                  >
-                    VueJS
-                  </a>
+                  {article.entry.tags?.map(async (tag, tagIndex: any) => (
+                    <a
+                      key={tagIndex}
+                      href='#'
+                      className='text-primary hover:bg-primary rounded-full border border-gray-100 px-3 py-1 text-sm font-medium transition duration-300 hover:border-transparent hover:text-white dark:border-gray-700 dark:text-gray-300'
+                    >
+                      {tag}
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>

@@ -41,6 +41,9 @@ dependencies:
   react-wrap-balancer:
     specifier: ^1.1.0
     version: 1.1.0(react@18.2.0)
+  shiki:
+    specifier: ^0.14.5
+    version: 0.14.5
   twin.macro:
     specifier: ^3.4.0
     version: 3.4.0(tailwindcss@3.3.3)
@@ -3226,6 +3229,13 @@ packages:
     engines: { node: '>=8' }
     dev: true
 
+  /ansi-sequence-parser@1.1.1:
+    resolution:
+      {
+        integrity: sha512-vJXt3yiaUL4UU546s3rPXlsry/RnM730G1+HkpKE012AN0sx1eOrxSu95oKDIonskeLTijMgqWZ3uDEe3NFvyg==,
+      }
+    dev: false
+
   /ansi-styles@3.2.1:
     resolution:
       {
@@ -5690,6 +5700,13 @@ packages:
       minimist: 1.2.8
     dev: true
 
+  /jsonc-parser@3.2.0:
+    resolution:
+      {
+        integrity: sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==,
+      }
+    dev: false
+
   /jsonfile@6.1.0:
     resolution:
       {
@@ -7302,6 +7319,18 @@ packages:
     engines: { node: '>=8' }
     dev: true
 
+  /shiki@0.14.5:
+    resolution:
+      {
+        integrity: sha512-1gCAYOcmCFONmErGTrS1fjzJLA7MGZmKzrBNX7apqSwhyITJg2O102uFzXUeBxNnEkDA9vHIKLyeKq0V083vIw==,
+      }
+    dependencies:
+      ansi-sequence-parser: 1.1.1
+      jsonc-parser: 3.2.0
+      vscode-oniguruma: 1.7.0
+      vscode-textmate: 8.0.0
+    dev: false
+
   /side-channel@1.0.4:
     resolution:
       {
@@ -8070,6 +8099,20 @@ packages:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
     dev: true
+
+  /vscode-oniguruma@1.7.0:
+    resolution:
+      {
+        integrity: sha512-L9WMGRfrjOhgHSdOYgCt/yRMsXzLDJSL7BPrOZt73gU0iWO4mpqzqQzOz5srxqTvMBaR0XZTSrVWo4j55Rc6cA==,
+      }
+    dev: false
+
+  /vscode-textmate@8.0.0:
+    resolution:
+      {
+        integrity: sha512-AFbieoL7a5LMqcnOF04ji+rpXadgOXnZsxQr//r83kLPr7biP7am3g9zbaZIaBGwBRWeSvoMD4mgPdX3e4NWBg==,
+      }
+    dev: false
 
   /w3c-keyname@2.2.8:
     resolution:
