@@ -42,8 +42,8 @@ export default async function Page({ params }: any) {
     <div className='flex justify-center'>
       <div className='mx-auto w-full px-4 py-8 sm:max-w-xl md:max-w-screen-lg md:px-24'>
         <div className='prose mt-8 max-w-none'>
-          <div className='text-center'>
-            <div className='flex justify-center gap-4'>
+          <div className='md:text-center'>
+            <div className='flex gap-4 md:justify-center'>
               {detailArticle?.tags?.map(async (tag, tagIndex: any) => (
                 <a
                   key={tagIndex}
