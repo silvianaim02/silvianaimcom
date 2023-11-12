@@ -32,9 +32,8 @@ const Banner = () => {
             </h1>
             <p className='mx-auto mb-10 max-w-[600px] text-base text-gray-600 dark:text-[#e4e4e4] sm:text-lg sm:leading-relaxed md:text-xl md:leading-relaxed'>
               I’m Silvia Naim, a software developer (frontend) based on
-              Indonesia who love crafting user-friendly web-application. In
-              other side, I also curious about general technology 💻. Happy if
-              you visit here!
+              Indonesia who love crafting user-friendly web-application 💻.
+              Happy if you visit here!
             </p>
             <ul className='mb-10 flex flex-wrap items-center justify-center'>
               <li>
