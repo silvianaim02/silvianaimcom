@@ -39,7 +39,10 @@ const Footer = () => {
               <FaTelegramPlane />
             </span>
           </a>
-          <a target='_blank' href='https://t.me/silvianaim02'>
+          <a
+            target='_blank'
+            href='https://t.https://medium.com/@silvianaim02/silvianaim02'
+          >
             <span className='text-2xl text-blue-500'>
               <BsMedium />
             </span>
