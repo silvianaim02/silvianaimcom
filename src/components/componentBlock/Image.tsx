@@ -10,7 +10,7 @@ const Image = ({
   caption?: string;
 }) => {
   return (
-    <div className='flex flex-col items-center'>
+    <div className='my-10 flex flex-col items-center'>
       <BlurImage
         image={`${src}`}
         alt={alt}

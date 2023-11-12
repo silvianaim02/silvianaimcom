@@ -42,8 +42,26 @@ export default async function Page({ params }: any) {
     <div className='flex justify-center'>
       <div className='mx-auto w-full px-4 py-8 sm:max-w-xl md:max-w-screen-lg md:px-24'>
         <div className='prose mt-8 max-w-none'>
-          <h2 className='mt-4 font-bold'>{detailArticle?.title}</h2>
-          <div className='mt-8'>
+          <div className='text-center'>
+            <div className='flex justify-center gap-4'>
+              {detailArticle?.tags?.map(async (tag, tagIndex: any) => (
+                <a
+                  key={tagIndex}
+                  href='#'
+                  className='text-primary hover:bg-primary rounded-full border border-gray-100 px-3 py-1 text-sm font-medium transition duration-300 hover:border-transparent hover:text-white dark:border-gray-700 dark:text-gray-300'
+                >
+                  {tag}
+                </a>
+              ))}
+            </div>
+            <h1 className='mt-4 text-3xl font-bold text-gray-800 dark:text-white md:text-4xl'>
+              {detailArticle?.title}
+            </h1>
+            <p className='mt-4 text-gray-400 dark:text-gray-500'>
+              {detailArticle?.date}
+            </p>
+          </div>
+          <div className='content-style mt-8'>
             <DocumentRenderer
               document={await detailArticle?.content}
               componentBlocks={{

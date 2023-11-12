@@ -54,10 +54,9 @@ const page = async () => {
                     {article.entry.title}
                   </Link>
                 </h3>
-                {/* <div className='my-6 limited-text text-gray-600 dark:text-gray-300'>
-                  <DocumentRenderer document={await article.entry.content()} />
-                </div> */}
-
+                <p className='limited-text my-6 text-gray-600 dark:text-gray-300'>
+                  {article.entry.summary}
+                </p>
                 <div className='flex gap-4'>
                   {article.entry.tags?.map(async (tag, tagIndex: any) => (
                     <a

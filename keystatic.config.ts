@@ -29,9 +29,10 @@ export default config({
           // Labelling options
           {
             label: 'Tag',
-            itemLabel: (props) => props.value,
+            itemLabel: (props: any) => props.value,
           }
         ),
+        summary: fields.text({ label: 'Summary' }),
         content: fields.document({
           label: 'Content',
           links: true,
