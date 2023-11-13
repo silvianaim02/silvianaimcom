@@ -9,16 +9,13 @@ import {
 } from '@keystatic/core';
 
 export default config({
-  storage:
-    process.env.NODE_ENV === 'development'
-      ? { kind: 'local' }
-      : {
-          kind: 'github',
-          repo: {
-            owner: process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_OWNER!,
-            name: process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_SLUG!,
-          },
-        },
+  storage: {
+    kind: 'github',
+    repo: {
+      owner: process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_OWNER!,
+      name: process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_SLUG!,
+    },
+  },
   collections: {
     articles: collection({
       label: 'Articles',
