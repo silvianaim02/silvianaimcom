@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import { createReader } from '@keystatic/core/reader';
-import keystaticConfig from '../../../../keystatic.config';
+import keystaticConfig from '../../../../../keystatic.config';
 import {
   DocumentRenderer,
   DocumentRendererProps,
 } from '@keystatic/core/renderer';
-import Image from '@/components/componentBlock/Image';
+import Image from '@/components/keystatic/Image';
 
 // Return a list of `params` to populate the [slug] dynamic segment
 // 1. Create a reader
