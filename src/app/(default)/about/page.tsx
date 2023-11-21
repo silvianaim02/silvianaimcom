@@ -13,7 +13,7 @@ const page = () => {
         <div className='container m-auto px-6 text-gray-600 md:px-12 xl:px-6'>
           <div className='mb-10 flex items-center gap-6 space-y-2 lg:mx-auto lg:w-6/12'>
             <BlurImage
-              image={'/images/silvia-naim.png'}
+              image={'/images/silvianaim.jpeg'}
               className='rounded-full'
               width={80}
               height={80}
@@ -24,8 +24,7 @@ const page = () => {
                 Silvia Naim
               </h2>
               <p className='text-sm text-gray-500 dark:text-gray-400'>
-                Software Developer (frontend). Code Learner. write to learn &
-                share.
+                Software Developer (frontend)
               </p>
             </div>
           </div>
