@@ -6,7 +6,11 @@ import 'aos/dist/aos.css';
 
 export const AOSInit = () => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      once: false,
+      easing: 'ease-out',
+      duration: 500,
+    });
   }, []);
 
   return null;

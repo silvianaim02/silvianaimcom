@@ -4,12 +4,7 @@ import BlurImage from '@/components/images/BlurImage';
 const page = () => {
   return (
     <>
-      <div
-        data-aos='fade-zoom-in'
-        data-aos-easing='ease-in-back'
-        data-aos-delay='300'
-        className='min-h-[400px] pb-6 pt-16'
-      >
+      <div className='min-h-[400px] pb-6 pt-16'>
         <div className='container m-auto px-6 text-gray-600 md:px-12 xl:px-6'>
           <div className='mb-10 flex items-center gap-6 space-y-2 lg:mx-auto lg:w-6/12'>
             <BlurImage
