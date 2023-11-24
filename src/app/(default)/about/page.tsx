@@ -1,5 +1,16 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import BlurImage from '@/components/images/BlurImage';
+import siteMetadata from '@/utils/siteMetaData';
+
+export const metadata: Metadata = {
+  title: {
+    template: `%s | ${siteMetadata.title}`,
+    default: 'About', // a default is required when creating a template
+  },
+  description:
+    'I’m a Frontend developer Based on Indonesia, Learning and working in the IT industry, especially when it comes to making software.',
+};
 
 const page = () => {
   return (

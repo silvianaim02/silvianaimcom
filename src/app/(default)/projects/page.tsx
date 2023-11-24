@@ -1,7 +1,18 @@
 import BlurImage from '@/components/images/BlurImage';
 import React from 'react';
+import type { Metadata } from 'next';
 import { projectDatas } from '@/utils/projectData';
 import { FiExternalLink } from 'react-icons/fi';
+import siteMetadata from '@/utils/siteMetaData';
+
+export const metadata: Metadata = {
+  title: {
+    template: `%s | ${siteMetadata.title}`,
+    default: 'Projects', // a default is required when creating a template
+  },
+  description:
+    'These are my past projects, including personal experiment, a list of freelance projects if they are publicly available, or just a fun project but I wanted to include it',
+};
 
 const page = () => {
   return (
