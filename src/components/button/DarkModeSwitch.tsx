@@ -38,9 +38,11 @@ const DarkModeSwitch = () => {
           mounted ? 'bg-black/90' : null
         } `}
         layout
-        transition={spring}
+        // transition={spring}
       >
-        <motion.div whileTap={{ rotate: 360 }}>
+        <motion.div
+        // whileTap={{ rotate: 360 }}
+        >
           {mounted ? (
             <>
               {isDarkTheme ? (

@@ -11,7 +11,6 @@ const reader = createReader(process.cwd(), keystaticConfig);
 const page = async () => {
   // 2. Read the "articles" collection
   const articles = await reader.collections.articles.all();
-  console.log(articles);
 
   return (
     <div className='pb-6 pt-16'>

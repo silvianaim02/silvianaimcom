@@ -1,11 +1,8 @@
-import Link from 'next/link';
 import { createReader } from '@keystatic/core/reader';
 import keystaticConfig from '../../../../../keystatic.config';
-import {
-  DocumentRenderer,
-  DocumentRendererProps,
-} from '@keystatic/core/renderer';
+import { DocumentRenderer } from '@keystatic/core/renderer';
 import Image from '@/components/keystatic/Image';
+import siteMetadata from '@/utils/siteMetaData';
 
 // Return a list of `params` to populate the [slug] dynamic segment
 // 1. Create a reader
@@ -19,6 +16,50 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: any) {
+  const { slug } = params;
+  const detailArticle = await getDetailData(slug);
+
+  if (!detailArticle) {
+    return;
+  }
+
+  let imageList = [siteMetadata.socialBanner];
+  if (detailArticle.thumbnail) {
+    imageList = [detailArticle.thumbnail];
+  }
+
+  const ogImages = imageList.map((img) => {
+    return {
+      url: img.includes('http') ? img : siteMetadata.siteUrl + img,
+    };
+  });
+
+  const author = siteMetadata.author;
+
+  return {
+    title: detailArticle.title,
+    description: detailArticle.summary,
+    openGraph: {
+      title: detailArticle.title,
+      description: detailArticle.summary,
+      url: siteMetadata.siteUrl + '/articles' + `/${slug}`,
+      siteName: siteMetadata.title,
+      images: ogImages,
+      publishedTime: detailArticle.date,
+      locale: 'en_US',
+      type: 'article',
+      authors: author,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: detailArticle.title,
+      description: detailArticle.summary,
+      images: ogImages,
+    },
+  };
+}
+
 async function getDetailData(slug: string) {
   const article = await reader.collections.articles.readOrThrow(slug, {
     resolveLinkedFiles: true,
@@ -30,13 +71,13 @@ async function getDetailData(slug: string) {
     thumbnail: article?.thumbnail,
     tags: article?.tags,
     content: article?.content,
+    summary: article.summary,
   };
 }
 
 export default async function Page({ params }: any) {
   const { slug } = params;
   const detailArticle = await getDetailData(slug);
-  console.log(detailArticle);
 
   return (
     <div className='flex justify-center'>
