@@ -50,6 +50,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
+      <script
+        async
+        src='https://umami.silvianaim.com/script.js'
+        data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || ''}
+      />
       <AOSInit />
       <body className={inter.className}>
         <NextTopLoader
