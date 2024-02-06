@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer>
       <div className='top-border-header'></div>
-      <div className='mx-auto flex max-w-7xl flex-col items-center justify-between px-4 py-12 sm:max-w-xl md:max-w-full md:flex-row md:px-24 lg:max-w-screen-xl lg:px-8'>
+      <div className='mx-auto flex flex-col items-center justify-between px-4 py-6 sm:max-w-xl md:max-w-6xl md:flex-row md:px-16 lg:max-w-5xl lg:px-8 xl:px-0'>
         <p className='mb-8 text-center text-sm text-gray-600 dark:text-[#e4e4e4] md:mb-0 md:text-left'>
           Made with ❤️ By {` `}
           <Link href='/about' className='font-semibold'>

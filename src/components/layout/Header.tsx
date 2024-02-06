@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <div className='sticky top-0 z-10'>
-      <div className='mx-auto bg-white px-4 py-6 dark:bg-gray-800 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8'>
+      <div className=' mx-auto bg-white px-4 py-6 dark:bg-gray-800 sm:max-w-xl md:max-w-6xl md:px-16 lg:max-w-5xl lg:px-8 xl:px-0'>
         <div className='relative flex items-center justify-between'>
           <div className='flex items-center gap-8'>
             <Link
@@ -38,11 +38,11 @@ const Header = () => {
                 Silvia Naim
               </span>
             </Link>
-            <ul className='hidden items-center space-x-8 lg:flex'>
+            <ul className='hidden items-center space-x-8 md:flex'>
               <DarkModeSwitch />
             </ul>
           </div>
-          <ul className='hidden items-center space-x-8 lg:flex'>
+          <ul className='hidden items-center space-x-8 md:flex'>
             {links.map(({ href, label }, index) => (
               <li key={index}>
                 <Link
@@ -63,7 +63,7 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          <div className='flex justify-center gap-2 lg:hidden'>
+          <div className='flex justify-center gap-2 md:hidden'>
             <DarkModeSwitch />
             <MenuButton
               isOpen={isMenuOpen}
