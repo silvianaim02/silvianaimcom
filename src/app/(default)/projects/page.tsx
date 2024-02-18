@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <div className='pb-6 pt-16'>
-      <div className='mx-auto px-4 text-gray-600 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8'>
+      <div className='mx-auto px-4 py-6 text-gray-600 sm:max-w-xl md:max-w-6xl md:px-16 lg:max-w-5xl lg:px-8 xl:px-0'>
         <div className='mb-12 space-y-2 text-center'>
           <h2 className='text-3xl font-bold text-gray-800 dark:text-white md:text-4xl'>
             Projects

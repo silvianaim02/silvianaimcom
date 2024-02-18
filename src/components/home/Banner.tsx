@@ -6,7 +6,7 @@ import { FaTelegramPlane } from 'react-icons/fa';
 const Banner = () => {
   return (
     <>
-      <div className='flex flex-wrap items-center justify-center'>
+      <div className='hero flex flex-wrap items-center justify-center'>
         <div className=' w-full px-4 py-20 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8'>
           <div className='hero-content mx-auto max-w-[780px] text-center'>
             <h1 className='mb-8 text-3xl font-bold leading-snug text-gray-800 dark:text-white sm:text-4xl sm:leading-snug md:text-[45px] md:leading-snug'>

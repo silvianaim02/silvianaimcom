@@ -24,8 +24,8 @@ const Header = () => {
   const currentRoute = usePathname();
 
   return (
-    <div className='sticky top-0 z-10'>
-      <div className=' mx-auto bg-white px-4 py-6 dark:bg-gray-800 sm:max-w-xl md:max-w-6xl md:px-16 lg:max-w-5xl lg:px-8 xl:px-0'>
+    <div className='sticky top-0 z-10 bg-white dark:bg-gray-800'>
+      <div className=' mx-auto bg-white px-4  py-6 dark:bg-gray-800 sm:max-w-xl md:max-w-6xl md:px-16 lg:max-w-5xl lg:px-8 xl:px-0'>
         <div className='relative flex items-center justify-between'>
           <div className='flex items-center gap-8'>
             <Link
